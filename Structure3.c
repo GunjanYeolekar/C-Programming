@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+struct Student
+{
+    int Marks;      // 4
+    int Age;        // 4
+    char Division;  // 1
+};
+
+int main()
+{
+    struct Student obj;         // 9 byte
+    struct Student *ptr = NULL; // 8 byte
+    // struct Student *ptr = &obj;
+    ptr = &obj;
+
+    // Indirect Accessing operator
+    ptr->Marks = 90;
+    ptr->Age = 21;
+    ptr->Division = 'B';
+
+    return 0;
+}
